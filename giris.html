@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giris Yap</title>
+    <style>
+        
+        body{
+            background-image: url("bg-2.jpeg");
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+            
+        }
+
+
+        * {box-sizing: border-box;}
+
+        /* html { 
+            scroll-behavior: smooth;
+        } */
+
+        .main-nav__item a::before{ 
+            content: '\26ED';    
+        }
+
+        .top{  
+            padding: 2px 6px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items:center ;
+        } 
+
+        .main-nav a{ /*en üstte çark ile gösterilenler */ 
+            display: inline-block;
+            text-align: right;
+            font-weight: bold ; 
+            color: #032046;
+            text-decoration: none;  
+            margin: 0;
+            padding: 0; 
+            list-style: none;    
+        }  
+
+        .main-nav__item { /* item değerlerinin yanyana durması */
+            display: inline-block; 
+            margin: 0 10px;
+        } 
+
+        .main-nav__items {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-header__logo { 
+            color:#032046 ;
+            font-size: 50px;
+            text-decoration: none;     
+        }
+
+        #backtotop {
+            position: fixed;
+            bottom: 0px;
+            right: 10px; 
+        }
+
+        .scrollsymbol {
+            font-size:30px;
+            color:#021526;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, select, button {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        } 
+
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+
+        
+    </style>
+</head>
+<body id="body">
+    <div class="top">
+        <a href="#" class="main-header__logo">ToDo</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="#">Plans</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Movies</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Books</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Important Days</a>
+                </li>    
+            </ul>    
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Giriş Yap</h1>
+        <form action="">
+            <label for="ad">Ad:</label>
+            <input type="text" id="ad">
+
+            <label for="soyad">Soyad:</label>
+            <input type="text" id="soyad">
+
+            <label for="email">Email:</label>
+            <input type="text" id="mail">
+
+            <label for="sifre">Sifre:</label>
+            <input type="text" id="sifre">
+
+            <label for="cinsiyet">Cinsiyet:</label>
+            <select id="cinsiyet">
+                <option value="">Select</option>
+                <option value="">Kadın</option>
+                <option value="">Erkek</option>
+            </select>
+
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree-terms">
+                <label for="agree-terms">Agree to
+                    <a href="#">Terms &amp; Conditions</a>
+                </label>
+            </div>  
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+
+
+        </form>
+    </div>
+
+    <a href="#body" id="backtotop">
+        <span class="scrollsymbol">&#129093;</span>
+  
+    </a>
+</body>
+</html>
